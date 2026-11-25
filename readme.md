@@ -1,82 +1,87 @@
-# 🚛 Sistema de Monitoramento de Frotas de Veículos
+# Sistema de Gestão e Monitoramento de Frotas 🚛
 
-Este repositório contém a atividade de desenvolvimento de um aplicativo mobile criado no **Android Studio** utilizando **Flutter** e banco de dados local **SQLite**. O sistema tem como objetivo realizar a gestão e o monitoramento de frotas de veículos voltados para o transporte de cargas.
+Projeto desenvolvido para a disciplina de Engenharia de Software, com a proposta de criar uma aplicação mobile para auxiliar no gerenciamento e acompanhamento de frotas de veículos.
 
----
+A ideia é reunir em um só lugar informações sobre veículos, motoristas e operações de transporte, facilitando a organização e o acesso aos dados da frota.
 
-## 📌 Sobre o Projeto
+## Sobre o projeto
 
-O **Sistema de Monitoramento de Frotas** é uma solução mobile desenvolvida para facilitar o controle de veículos, rotas, motoristas e cargas. A aplicação utiliza o **SQLite** como banco de dados relacional interno, garantindo a retenção e manipulação dos dados de forma rápida, eficiente e offline.
+O sistema foi desenvolvido utilizando Flutter e Dart, com integração ao Firebase Firestore para armazenamento das informações.
 
-### 🎯 Objetivos da Atividade
-- Implementar uma interface intuitiva e responsiva em **Flutter**.
-- Estruturar a persistência de dados localmente utilizando a biblioteca **SQLite** (`sqflite`).
-- Garantir as operações essenciais de **CRUD** (Create, Read, Update, Delete) para os recursos do sistema.
+A aplicação tem como foco facilitar tarefas que fazem parte da rotina de uma empresa de transporte, permitindo organizar os dados da frota e acompanhar as informações relacionadas aos veículos e às viagens.
 
----
+## Funcionalidades
 
-## 🛠️ Tecnologias Utilizadas
+O projeto contempla as seguintes funcionalidades:
 
-- **Linguagem:** [Dart](https://dart.dev/)
-- **Framework:** [Flutter](https://flutter.dev/)
-- **IDE:** [Android Studio](https://developer.android.com/studio)
-- **Banco de Dados Local:** [SQLite](https://www.sqlite.org/) (via pacote [`sqflite`](https://pub.dev/packages/sqflite))
+- **Cadastro de veículos:** registro de informações como placa, modelo e capacidade de carga.
+- **Cadastro de motoristas:** organização dos dados dos profissionais responsáveis pelos veículos.
+- **Controle de cargas e viagens:** associação entre veículos, motoristas e operações de transporte.
+- **Acompanhamento de status:** identificação da situação das viagens, como em trânsito, entregue ou aguardando.
+- **Armazenamento de dados:** utilização do Firebase Firestore para guardar e consultar as informações.
 
----
+## Tecnologias utilizadas
 
-## 🚀 Funcionalidades Principais
+| Tecnologia | Utilização |
+|---|---|
+| Flutter | Desenvolvimento da aplicação mobile |
+| Dart | Linguagem de programação |
+| Firebase Core | Integração com os serviços Firebase |
+| Cloud Firestore | Banco de dados na nuvem |
+| Android Studio | Ambiente de desenvolvimento |
 
-- [x] **Cadastro de Veículos:** Registro de caminhões/veículos (placa, modelo, capacidade de carga, status).
-- [x] **Cadastro de Motoristas:** Gestão dos dados dos condutores responsáveis pelas entregas.
-- [x] **Controle de Cargas e Viagens:** Vinculação de motoristas, veículos e itinerários.
-- [x] **Histórico e Status:** Acompanhamento do status do transporte (Em Trânsito, Entregue, Aguardando).
-- [x] **Persistência de Dados Local:** Salvamento offline de todas as informações utilizando SQLite.
+## Organização do projeto
 
----
-
-## 📂 Estrutura do Projeto
+A estrutura principal do projeto está organizada dentro da pasta `lib`, onde ficam os arquivos responsáveis pelo funcionamento da aplicação.
 
 ```text
-lib/
-├── database/        # Configuração do banco SQLite e DAOs (Data Access Objects)
-├── models/          # Modelos de dados (Veículo, Carga, Motorista)
-├── screens/         # Interfaces do usuário (Telas de cadastro, listagem, etc.)
-├── widgets/         # Componentes reutilizáveis de UI
-└── main.dart        # Ponto de entrada da aplicação
+engenharia-de-software/
+│
+├── lib/
+│   └── Código-fonte da aplicação
+│
+├── pubspec.yaml
+└── readme.md
 ```
 
----
+## Como executar o projeto
 
-## 🔧 Como Executar o Projeto
+Para executar a aplicação em sua máquina, é necessário ter o Flutter instalado e configurado.
 
-### Pré-requisitos
-- **Flutter SDK** instalado.
-- **Android Studio** configurado com um emulador Android (ou dispositivo físico conectado via Depuração USB).
+**1. Clone o repositório**
 
-### Passo a passo
+```bash
+git clone https://github.com/CarlosRGV-dev/engenharia-de-software.git
+```
 
-1. **Clone este repositório:**
-   ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   ```
+**2. Entre na pasta do projeto**
 
-2. **Acesse a pasta do projeto:**
-   ```bash
-   cd seu-repositorio
-   ```
+```bash
+cd engenharia-de-software
+```
 
-3. **Instale as dependências:**
-   ```bash
-   flutter pub get
-   ```
+**3. Instale as dependências**
 
-4. **Execute a aplicação:**
-   ```bash
-   flutter run
-   ```
+```bash
+flutter pub get
+```
 
----
+**4. Configure o Firebase**
 
-## 📝 Licença
+Configure um projeto Firebase e conecte a aplicação ao Firestore. Verifique também se os arquivos de configuração da plataforma escolhida estão presentes.
 
-Este projeto foi desenvolvido para fins acadêmicos e pedagógicos. Sinta-se à vontade para utilizar e aprimorar a solução!
+**5. Execute a aplicação**
+
+```bash
+flutter run
+```
+
+## Objetivo acadêmico
+
+Este projeto faz parte das atividades da disciplina de Engenharia de Software e tem como objetivo colocar em prática os conhecimentos adquiridos durante o desenvolvimento de uma aplicação, desde sua organização até a implementação de suas funcionalidades.
+
+## Repositório
+
+O código-fonte e as atualizações do projeto estão disponíveis no GitHub:
+
+[engenharia-de-software](https://github.com/CarlosRGV-dev/engenharia-de-software)
